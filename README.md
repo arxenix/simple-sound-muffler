@@ -14,6 +14,7 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 ![gui](https://i.imgur.com/9RNs7nk.png)
 
+
 ## Settings
 
 **DENY mode** - do not muffle any sounds except for the selected ones
@@ -22,7 +23,13 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 **Muffle Amount** - how much the sounds should be muffled by. full slider = muted, minimum slider = no effect
 
- 
+
+ ## Dependencies
+- [fabric modloader](https://fabricmc.net/use/)
+- [fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+- [fabric-drawer](https://www.curseforge.com/minecraft/mc-mods/fabric-drawer) 3.2.1-20w19a
+- [fabric-language-kotlin](https://github.com/FabricMC/fabric-language-kotlin) 1.3.60+build.1
+
 
 ## Demo Video
 
