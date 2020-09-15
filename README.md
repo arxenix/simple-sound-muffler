@@ -1,5 +1,5 @@
 # Simple Sound Muffler
- 
+
 This is a Minecraft mod for the Fabric Modloader, currently compatible with 1.16.2 and 1.16.3
 
 The mod adds a single item and block to the game - the Sound Muffler. When placed, this block mutes all noises that originate within 3 blocks. 
@@ -24,7 +24,8 @@ The block can also be right-clicked to open up a UI where you can configure it f
 **Muffle Amount** - how much the sounds should be muffled by. full slider = muted, minimum slider = no effect
 
 
- ## Dependencies
+## Dependencies
+ 
 - [fabric modloader](https://fabricmc.net/use/)
 - [fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 - [fabric-drawer](https://www.curseforge.com/minecraft/mc-mods/fabric-drawer) 3.2.1-20w19a
@@ -35,3 +36,9 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 https://www.youtube.com/watch?v=mWYyhK7ld-s
 
+## TODO
+
+- [ ] improve gui
+- [ ] optimize more
+- [ ] configurable radius (?)
+- [ ] add sound by manually entering ID
