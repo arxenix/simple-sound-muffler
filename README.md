@@ -29,7 +29,6 @@ The block can also be right-clicked to open up a UI where you can configure it f
  
 - [fabric modloader](https://fabricmc.net/use/)
 - [fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
-- [fabric-drawer](https://www.curseforge.com/minecraft/mc-mods/fabric-drawer) 3.2.1-20w19a
 - [fabric-language-kotlin](https://github.com/FabricMC/fabric-language-kotlin) >=1.3.60, <=1.4.0
 
 
