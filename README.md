@@ -35,3 +35,7 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 https://www.youtube.com/watch?v=mWYyhK7ld-s
 
+## TODO
+
+- [ ] improve gui
+- [ ] optimize more
