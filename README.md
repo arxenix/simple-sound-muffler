@@ -39,3 +39,5 @@ https://www.youtube.com/watch?v=mWYyhK7ld-s
 
 - [ ] improve gui
 - [ ] optimize more
+- [ ] configurable radius (?)
+- [ ] add sound by manually entering ID
