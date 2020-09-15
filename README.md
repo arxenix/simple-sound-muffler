@@ -1,16 +1,26 @@
-# Fabric Example Mod - Kotlin
+# Simple Sound Muffler
+ 
+This is a Minecraft mod for the Fabric Modloader, currently compatible with 1.16.2 and 1.16.3
 
-## Setup
+The mod adds a single item and block to the game - the Sound Muffler. When placed, this block mutes all noises that originate within 3 blocks. 
 
-0. Create a new mod repository by pressing the "Use this template" button and clone the created repository.
+![screenshot](https://i.imgur.com/KOVbVkZ.png)
 
-1. Import build.gradle file with IntelliJ IDEA
+The block can also be right-clicked to open up a UI where you can configure it further. 
 
-2. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-3. Run!
+![gui](https://i.imgur.com/9RNs7nk.png)
 
-## License
+## Settings
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+**DENY mode** - do not muffle any sounds except for the selected ones
+
+**ALLOW mode** - muffle all sounds except for the selected ones
+
+**Muffle Amount** - how much the sounds should be muffled by. full slider = muted, minimum slider = no effect
+
+ 
+
+## Demo Video
+
+https://www.youtube.com/watch?v=mWYyhK7ld-s
+
