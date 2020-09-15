@@ -12,7 +12,7 @@ The recipe is one note block surrounded by 8 wool (any color)
 
 The block can also be right-clicked to open up a UI where you can configure it further. 
 
-![gui](https://i.imgur.com/9RNs7nk.png)
+![gui](https://i.imgur.com/QMEcgwM.png)
 
 
 ## Settings
@@ -21,8 +21,9 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 **ALLOW mode** - muffle all sounds except for the selected ones
 
-**Muffle Amount** - how much the sounds should be muffled by. full slider = muted, minimum slider = no effect
+**Muffle %** - how much the sounds should be muffled by. 100% = muted, 0% = no effect
 
+**Radius** - radius to muffle sounds in
 
 ## Dependencies
  
@@ -40,5 +41,4 @@ https://www.youtube.com/watch?v=mWYyhK7ld-s
 
 - [ ] improve gui
 - [ ] optimize more
-- [ ] configurable radius (?)
 - [ ] add sound by manually entering ID
