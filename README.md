@@ -6,6 +6,10 @@ The mod adds a single item and block to the game - the Sound Muffler. When place
 
 ![screenshot](https://i.imgur.com/KOVbVkZ.png)
 
+The recipe is one note block surrounded by 8 wool (any color)
+
+![recipe](https://i.imgur.com/VExX1rl.png)
+
 The block can also be right-clicked to open up a UI where you can configure it further. 
 
 ![gui](https://i.imgur.com/9RNs7nk.png)
