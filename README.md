@@ -25,6 +25,7 @@ The block can also be right-clicked to open up a UI where you can configure it f
 
 
  ## Dependencies
+ 
 - [fabric modloader](https://fabricmc.net/use/)
 - [fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 - [fabric-language-kotlin](https://github.com/FabricMC/fabric-language-kotlin) 1.3.60+build.1
