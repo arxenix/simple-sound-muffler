@@ -69,7 +69,8 @@ class SimpleSoundMuffler: ModInitializer {
                 val blockEntity = ctx.player.world.getBlockEntity(pos)
                 if (blockEntity is SoundMufflerBlockEntity) {
                     if (ctx.player.world.canPlayerModifyAt(ctx.player, pos)) {
-                        if (data.muffleAmount in 0..100) {
+                        if (data.muffleAmount in 0..100
+                            && data.radius in 1..16) {
                             blockEntity.data = data
                             blockEntity.sync()
                             blockEntity.markDirty()

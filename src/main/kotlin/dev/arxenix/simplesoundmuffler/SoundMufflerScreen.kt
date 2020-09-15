@@ -54,6 +54,12 @@ class SoundMufflerGui(val blockEntity: SoundMufflerBlockEntity): LightweightGuiD
         setRootPanel(root)
         root.setSize(252, 200)
 
+
+        // TITLE
+        root.add(WText(LiteralText("Sound Muffler")), 2, 0, 6, 1)
+
+
+        // SOUND LIST
         listPanel = WListPanel<Identifier, ListItem>(
             observedSoundList,
             {
@@ -76,7 +82,10 @@ class SoundMufflerGui(val blockEntity: SoundMufflerBlockEntity): LightweightGuiD
                 destination.button.label = LiteralText(s.toString())
             }
         ).setListItemHeight(20)
-        root.add(listPanel, 0, 0, 14, 9)
+        root.add(listPanel, 0, 1, 14, 8)
+
+
+        // MODE SWITCH
         val modeButton = WButton(LiteralText("Mode: ${blockEntity.data.mode.name}"))
         modeButton.onClick = Runnable {
             blockEntity.data.mode = SoundMufflerMode.values()[(blockEntity.data.mode.ordinal + 1) % SoundMufflerMode.values().size]
@@ -84,18 +93,42 @@ class SoundMufflerGui(val blockEntity: SoundMufflerBlockEntity): LightweightGuiD
 
             sendUpdatePacket()
         }
-        root.add(modeButton, 0, 10, 6, 1)
+        root.add(modeButton, 7, 0, 6, 1)
 
+
+        // MUFFLE SLIDER
         val muffleSlider = WSlider(0, 100, Axis.HORIZONTAL)
         muffleSlider.value = blockEntity.data.muffleAmount
+        val muffleText = WText(LiteralText("Muffle: ${blockEntity.data.muffleAmount}%"))
+        muffleSlider.setValueChangeListener {
+            blockEntity.data.muffleAmount = it
+            muffleText.text = LiteralText("Muffle: ${blockEntity.data.muffleAmount}%")
+        }
+        // only send packet on dragging finished
         muffleSlider.setDraggingFinishedListener {
             blockEntity.data.muffleAmount = it
-
             sendUpdatePacket()
         }
+        root.add(muffleText, 0, 10, 6, 1)
+        root.add(muffleSlider, 0, 11, 6, 1)
 
-        root.add(WText(LiteralText("Muffle Amount")), 7, 10, 7, 1)
-        root.add(muffleSlider, 7, 11, 7, 1)
+
+        // RADIUS SLIDER
+        val radiusSlider = WSlider(1, 16, Axis.HORIZONTAL)
+        radiusSlider.value = blockEntity.data.radius
+        val radiusText = WText(LiteralText("Radius: ${blockEntity.data.radius}"))
+        radiusSlider.setValueChangeListener {
+            blockEntity.data.radius = it
+            radiusText.text = LiteralText("Radius: ${blockEntity.data.radius}")
+        }
+        radiusSlider.setDraggingFinishedListener {
+            blockEntity.data.radius = it
+            sendUpdatePacket()
+        }
+        root.add(radiusText, 8, 10, 6, 1)
+        root.add(radiusSlider, 8, 11, 6, 1)
+
+
         root.validate(this)
     }
 }
