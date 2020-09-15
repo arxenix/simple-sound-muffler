@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "dev.arxenix.simplesoundmuffler.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "ClientWorldMixin",
+    "AbstractSoundInstanceAccessor"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
