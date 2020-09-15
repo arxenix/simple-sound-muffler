@@ -31,12 +31,13 @@ class SimpleSoundMuffler: ModInitializer {
 
     override fun onInitialize() {
         println("SimpleSoundMuffler - fabric mod initialized")
-        println(SoundMufflerData())
-        val t2 = SoundMufflerData(SoundMufflerMode.DENY, mutableSetOf(SoundEvents.AMBIENT_BASALT_DELTAS_ADDITIONS.id), 2)
-        val tag = CompoundTag()
-        SoundMufflerData.serializer().put(t2, tag)
-        SoundMufflerData.serializer().getFrom(tag)
 
+        // validation test
+        val t1 = SoundMufflerData(SoundMufflerMode.DENY, mutableSetOf(SoundEvents.AMBIENT_BASALT_DELTAS_ADDITIONS.id), 2)
+        val tag = CompoundTag()
+        SoundMufflerData.serializer().put(t1, tag)
+        val t2 = SoundMufflerData.serializer().getFrom(tag)
+        assert(t1 == t2)
 
         BLOCK = Registry.register(
             Registry.BLOCK,

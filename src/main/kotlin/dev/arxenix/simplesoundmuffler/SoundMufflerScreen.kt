@@ -100,7 +100,7 @@ class SoundMufflerGui(val blockEntity: SoundMufflerBlockEntity): LightweightGuiD
     }
 }
 
-class ListItem(onToggle: BiConsumer<ListItem, Boolean>, enabled: Boolean = true) : WPlainPanel() {
+class ListItem(onToggle: BiConsumer<ListItem, Boolean>) : WPlainPanel() {
     var button = WToggleButton(LiteralText("placeholder"))
     var soundEvent: Identifier? = null
 
